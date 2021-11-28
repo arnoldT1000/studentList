@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="studentList.Views.StudentListView">
+    <ListView x:Name="list1" ItemsSource="{Binding Items}"
+              CachingStrategy="RecycleElement" RowHeight="60" Margin="5,5,0,0">
+        <ListView.Header>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Header"
+               TextColor="white"
+               BackgroundColor="black" />
+            </StackLayout>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+        <DataTemplate>
+            <ViewCell>
+                <StackLayout Margin="10">
+                    
+                    <Label Text="{Binding Name}"/>
+                    <Label Text="{Binding Age}" />
+                </StackLayout>
+            </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+
+    </ListView>
+</ContentPage>
